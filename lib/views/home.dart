@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-
+import '../widgets/map.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -20,12 +19,7 @@ class _HomeState extends State<Home> {
           child: Text('Flutter App'),
         ),
       ),
-      body: Center(
-        child: Text(
-          'The  is at: ${counter * 5}',
-          style: const TextStyle(fontSize: 30),
-        ),
-      ),
+      body: const Map(),
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.add),
         onPressed: () {
