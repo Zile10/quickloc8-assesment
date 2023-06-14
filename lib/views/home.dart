@@ -20,14 +20,14 @@ class _HomeState extends State<Home> {
         ),
       ),
       body: const Map(),
-      floatingActionButton: FloatingActionButton(
-        child: const Icon(Icons.add),
-        onPressed: () {
-          setState(() {
-            counter++;
-          });
-        },
-      ),
+      // floatingActionButton: FloatingActionButton(
+      //   child: const Icon(Icons.add),
+      //   onPressed: () {
+      //     setState(() {
+      //       counter++;
+      //     });
+      //   },
+      // ),
       bottomNavigationBar: BottomNavigationBar(
         items: const [
           BottomNavigationBarItem(

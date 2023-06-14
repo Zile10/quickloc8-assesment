@@ -16,24 +16,23 @@ class _MapState extends State<Map> {
   Widget build(BuildContext context) {
     return FlutterMap(
       options: MapOptions(
-        center: const LatLng(-33.9249, 18.4241),
-        zoom: 3,
+        center: LatLng(-34.0461583, 22.7047383),
+        zoom: 5,
       ),
+      children: [
+        TileLayer(
+          urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+          userAgentPackageName: 'com.example.app',
+        ),
+      ],
       nonRotatedChildren: [
         RichAttributionWidget(
           attributions: [
             TextSourceAttribution(
               'OpenStreetMap contributors',
-              onTap: () =>
-                  launchUrl(Uri.parse('https://openstreetmap.org/copyright')),
+              onTap: () => launchUrl(Uri.parse('https://openstreetmap.org/copyright')),
             ),
           ],
-        ),
-      ],
-      children: [
-        TileLayer(
-          urlTemplate: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-          userAgentPackageName: 'com.example.app',
         ),
       ],
     );
