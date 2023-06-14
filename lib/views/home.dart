@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../views/messages.dart';
 import '../widgets/map.dart';
 
 class Home extends StatefulWidget {
@@ -16,36 +17,30 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         backgroundColor: const Color.fromRGBO(239, 66, 36, 1),
         title: const Center(
-          child: Text('Flutter App'),
+          child: Text('QuickLoc8: Map'),
         ),
       ),
-      body: const Map(),
-      // floatingActionButton: FloatingActionButton(
-      //   child: const Icon(Icons.add),
-      //   onPressed: () {
-      //     setState(() {
-      //       counter++;
-      //     });
-      //   },
-      // ),
+      body: const MyMap(),
       bottomNavigationBar: BottomNavigationBar(
+        currentIndex: 0,
+        onTap: (index) {
+          if (index == 1) {
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(builder: (context) => const MessagesPage()),
+            );
+          }
+        },
         items: const [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
+            icon: Icon(Icons.map),
+            label: 'Map',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.business),
-            label: 'Business',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.work),
-            label: 'Work',
+            icon: Icon(Icons.message),
+            label: 'Messages',
           ),
         ],
-      ),
-      drawer: Drawer(
-        child: ListView(),
       ),
     );
   }
