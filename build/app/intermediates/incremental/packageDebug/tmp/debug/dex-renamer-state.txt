@@ -1,0 +1,4 @@
+#Tue Jun 13 12:30:12 SAST 2023
+base.0=C\:\\Users\\Intern 45\\Documents\\web_workshop\\flutter\\quickloc8\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
